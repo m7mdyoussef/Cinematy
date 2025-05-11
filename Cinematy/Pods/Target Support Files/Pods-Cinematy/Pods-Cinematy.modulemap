@@ -1,0 +1,6 @@
+framework module Pods_Cinematy {
+  umbrella header "Pods-Cinematy-umbrella.h"
+
+  export *
+  module * { export * }
+}

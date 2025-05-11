@@ -1,0 +1,23 @@
+
+//MARK: General
+"genericError" = "General Error occured, kindly try again later";
+"noInternetConnection" = "No Internet Connection, Please connect to WI-FI or Mobile Data and try again.";
+"errorGetCastingList" = "Error Ocurred while fetching Casting, kindly try again later";
+"errorGetSimilarList" = "Error Ocurred while fetching Similar Movies, kindly try again later";
+"alertTitle" = "ِError";
+"ok" = "Ok";
+
+//MARK: Splash Screen
+"appName" = "Cinematy";
+"welcome_to" = "Welcome To";
+
+//MARK: Movie Screen
+"votes" = "Votes";
+
+//MARK: Movie Screen
+"storyline" = "Storyline";
+"releaseDate" = "Release Date";
+"revenue" = "revenue";
+"Status" = "Status";
+"Similar" = "Similar Movies";
+"Casting" = "Casting";

@@ -1,0 +1,24 @@
+
+//MARK: General
+"genericError" = "حدث خطأ عام، يرجى المحاولة مرة أخرى لاحقًا";
+"noInternetConnection" = "لا يوجد اتصال بالإنترنت، يرجى الاتصال بشبكة WI-FI أو بيانات الجوال والمحاولة مرة أخرى.";
+"errorGetCastingList" = "حدث خطأ أثناء تحميل طاقم التمثيل، يرجى المحاولة مرة أخرى لاحقًا.";
+"errorGetSimilarList" = "حدث خطأ أثناء تحميل الأفلام المماثلة، يرجى المحاولة مرة أخرى لاحقًا.";
+
+"alertTitle" = "خطأ";
+"ok" = "حسناً";
+
+//MARK: Splash Screen
+"appName" = "سينيماتي";
+"welcome_to" = "مرحبا في";
+
+//MARK: Movie Screen
+"votes" = "عدد الاصوات";
+
+//MARK: Movie Screen
+"storyline" = "القصة";
+"releaseDate" = "وقت النشر";
+"revenue" = "الإيرادات";
+"Status" = "الحالة";
+"Similar" = "الافلام المشابهة";
+"Casting" = "طاقم العمل";
