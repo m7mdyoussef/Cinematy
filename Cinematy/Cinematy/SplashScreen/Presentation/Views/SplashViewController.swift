@@ -10,9 +10,9 @@ import UIKit
 
 class SplashViewController: UIViewController {
     
-    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet private weak var welcomeLabel: UILabel!
 
-    @IBOutlet weak var movieLabel: UILabel!
+    @IBOutlet private weak var movieLabel: UILabel!
     
     var viewModel: SplashViewModelContract!
     

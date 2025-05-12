@@ -14,6 +14,7 @@
 
 //MARK: Movie Screen
 "votes" = "عدد الاصوات";
+"SearchMovies" = "ابحث عن فيلم";
 
 //MARK: Movie Screen
 "storyline" = "القصة";
