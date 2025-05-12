@@ -45,7 +45,8 @@ class AppCoordinator: CoordinatorProtocol {
     }
     
     private func openMoviesScreen() {
-
+        let nextViewController = Injector.getMoviesViewController(coordinator: self)
+        navigationController.pushViewController(nextViewController, animated: false)
     }
     
     private func openMovieDetailsScreen(id: Int) {

@@ -13,6 +13,7 @@
 
 //MARK: Movie Screen
 "votes" = "Votes";
+"SearchMovies" = "Search Movies";
 
 //MARK: Movie Screen
 "storyline" = "Storyline";

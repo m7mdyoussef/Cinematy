@@ -26,6 +26,7 @@ enum Localize {
     
     enum MoviesHome {
         static let votes = "votes".localize
+        static let searchMovies = "SearchMovies".localize
     }
     
     enum MovieDetails {
