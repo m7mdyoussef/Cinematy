@@ -239,23 +239,7 @@ class DetailsViewController: BaseViewController, WKNavigationDelegate{
             .bind(to: castingTableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
         
-//        detailsViewModel.groupedItems
-//            .observe(on: MainScheduler.instance)
-//            .subscribe(onNext: { [weak self] _ in
-//                self?.castingTableView.reloadData()
-//                self?.updateCastingTableViewHeight()
-//            })
-//            .disposed(by: disposeBag)
-        
     }
-    
-//    private func updateCastingTableViewHeight() {
-//        // Ensure layout is completed before measuring
-//        DispatchQueue.main.async {
-//            self.castingTableView.layoutIfNeeded()
-//            self.castingTableViewHeightConstraint.constant = self.castingTableView.contentSize.height
-//        }
-//    }
     
     //MARK: - set Movie Details Data
     private func setData(movie: MovieDetailsModel) {
