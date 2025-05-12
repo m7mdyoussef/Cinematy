@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movies View Controller-->
+        <scene sceneID="REp-MP-pKc">
+            <objects>
+                <viewController storyboardIdentifier="MoviesViewController" id="4Yz-NQ-W2B" customClass="MoviesViewController" customModule="TestingMovies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fqn-R6-D3b">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cUZ-h9-PFd">
+                                <rect key="frame" x="8" y="59" width="377" height="759"/>
+                                <color key="backgroundColor" name="homeBackground"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QAG-Wf-N5I"/>
+                        <color key="backgroundColor" name="homeBackground"/>
+                        <constraints>
+                            <constraint firstItem="cUZ-h9-PFd" firstAttribute="bottom" secondItem="QAG-Wf-N5I" secondAttribute="bottom" id="DiN-jV-t9y"/>
+                            <constraint firstItem="cUZ-h9-PFd" firstAttribute="top" secondItem="QAG-Wf-N5I" secondAttribute="top" id="Lav-qS-osu"/>
+                            <constraint firstItem="QAG-Wf-N5I" firstAttribute="trailing" secondItem="cUZ-h9-PFd" secondAttribute="trailing" constant="8" id="rh9-q2-fSx"/>
+                            <constraint firstItem="cUZ-h9-PFd" firstAttribute="leading" secondItem="QAG-Wf-N5I" secondAttribute="leading" constant="8" id="yuF-BE-nFx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="moviesTableView" destination="cUZ-h9-PFd" id="peb-Z1-j8P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U29-8L-0Xq" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="153"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="homeBackground">
+            <color red="0.082352941176470587" green="0.098039215686274508" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

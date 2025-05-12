@@ -1,0 +1,14 @@
+platform :ios, '14.0'
+
+target 'Cinematy' do
+  use_frameworks!
+
+  # Pods for Cinematy
+
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxDataSources'
+  pod 'Alamofire'
+  pod 'SDWebImage'
+
+end
