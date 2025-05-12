@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SimilarMovieCollectionViewCell" reuseIdentifier="SimilarMovieCollectionViewCell" id="gTV-IL-0wX" customClass="SimilarMovieCollectionViewCell" customModule="TestingMovies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="133" height="229"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="133" height="229"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phZ-Fr-RYb">
+                        <rect key="frame" x="0.0" y="0.0" width="133" height="229"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8R3-ZH-sBc">
+                                <rect key="frame" x="0.0" y="0.0" width="133" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="ATL-3o-rci"/>
+                                    <constraint firstAttribute="height" constant="160" id="hWi-uN-5e7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="movie name ej32eknkj 3j2nek" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIB-sF-BRf">
+                                <rect key="frame" x="5" y="165" width="123" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="87F-bt-LCi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="homeBackground"/>
+                        <constraints>
+                            <constraint firstItem="lIB-sF-BRf" firstAttribute="leading" secondItem="phZ-Fr-RYb" secondAttribute="leading" constant="5" id="42d-OK-Ksx"/>
+                            <constraint firstItem="8R3-ZH-sBc" firstAttribute="leading" secondItem="phZ-Fr-RYb" secondAttribute="leading" id="9sy-oI-4MR"/>
+                            <constraint firstAttribute="bottom" secondItem="lIB-sF-BRf" secondAttribute="bottom" constant="5" id="Deb-eB-cHB"/>
+                            <constraint firstAttribute="trailing" secondItem="8R3-ZH-sBc" secondAttribute="trailing" id="GW4-70-rrk"/>
+                            <constraint firstItem="lIB-sF-BRf" firstAttribute="top" secondItem="8R3-ZH-sBc" secondAttribute="bottom" constant="5" id="JHI-7d-h3w"/>
+                            <constraint firstAttribute="trailing" secondItem="lIB-sF-BRf" secondAttribute="trailing" constant="5" id="gQy-Xg-8hQ"/>
+                            <constraint firstItem="8R3-ZH-sBc" firstAttribute="top" secondItem="phZ-Fr-RYb" secondAttribute="top" id="ksu-Nt-1PN"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="phZ-Fr-RYb" secondAttribute="trailing" id="TV6-bU-rW8"/>
+                <constraint firstItem="phZ-Fr-RYb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fpy-Gm-rqI"/>
+                <constraint firstItem="phZ-Fr-RYb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hsZ-iw-42G"/>
+                <constraint firstAttribute="bottom" secondItem="phZ-Fr-RYb" secondAttribute="bottom" id="jbv-xH-khg"/>
+            </constraints>
+            <size key="customSize" width="133" height="229"/>
+            <connections>
+                <outlet property="movieImage" destination="8R3-ZH-sBc" id="LLx-ii-8WL"/>
+                <outlet property="movieName" destination="lIB-sF-BRf" id="Fcj-Di-0cD"/>
+            </connections>
+            <point key="canvasLocation" x="118.32061068702289" y="72.183098591549296"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="homeBackground">
+            <color red="0.082352941176470587" green="0.098039215686274508" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

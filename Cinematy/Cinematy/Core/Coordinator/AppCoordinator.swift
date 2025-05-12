@@ -50,6 +50,7 @@ class AppCoordinator: CoordinatorProtocol {
     }
     
     private func openMovieDetailsScreen(id: Int) {
-
+        let nextViewController = Injector.getMovieDetailsViewController(coordinator: self, id: id)
+        navigationController.pushViewController(nextViewController, animated: true)
     }
 }

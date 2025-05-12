@@ -100,15 +100,18 @@ class MoviesViewController: BaseViewController {
             .bind(to: moviesTableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
         
-        moviesTableView.rx.didScroll.subscribe { [weak self] _ in
-            guard let self else { return }
-            let offSetY = self.moviesTableView.contentOffset.y
-            let contentHeight = self.moviesTableView.contentSize.height
-            
-            if offSetY > (contentHeight - self.moviesTableView.frame.size.height - 20) {
-                self.moviesViewModel.triggerFetchMore()
-            }
-        }.disposed(by: disposeBag)
+        moviesTableView.rx
+          .willDisplayCell
+          .debounce(.milliseconds(100), scheduler: MainScheduler.instance)
+          .filter { [weak self] _, indexPath in
+            guard let self = self else { return false }
+            let section = self.dataSource.sectionModels[indexPath.section]
+            return indexPath.row == section.items.count - 1
+          }
+          .subscribe(onNext: { [weak self] _ in
+            self?.moviesViewModel.triggerFetchMore()
+          })
+          .disposed(by: disposeBag)
         
         moviesViewModel.isLoadingSpinnerAvaliable.subscribe { [weak self] isAvaliable in
             guard let isAvaliable = isAvaliable.element,
