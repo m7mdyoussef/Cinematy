@@ -25,5 +25,24 @@ class Injector {
         viewcontroller.moviesViewModel = viewModel
         return viewcontroller
     }
+    
+    static func getMovieDetailsViewController(coordinator: CoordinatorProtocol, id: Int) -> DetailsViewController {
+        let remoteDatasource = MovieDetailsRemoteDatasourceImp()
+        
+        let movieDetailsRepo = MovieDetailsRepositoryImp(movieDetailsRemoteDatasource: remoteDatasource)
+        let movieDetailsUsecase = MovieDetailsUsecaseImp(repo: movieDetailsRepo)
+        
+        let similarMoviesRepo = SimilarMoviesRepositoryImp(movieDetailsRemoteDatasource: remoteDatasource)
+        let similarMoviesUsecase = SimilarMoviesUsecaseImp(repo: similarMoviesRepo)
+        
+        let similarMoviesCastRepo = MoviesCastingRepositoryImp(movieDetailsRemoteDatasource: remoteDatasource)
+        let similarMoviesCastUsecase = MoviesCastingUsecaseImp(repo: similarMoviesCastRepo)
+
+        let viewModel = DetailsViewModel(id: id, movieDetailsUsecase: movieDetailsUsecase, similarMoviesUsecase: similarMoviesUsecase, moviesCastingUsecase: similarMoviesCastUsecase, coordinator: coordinator)
+        
+        let viewcontroller = DetailsViewController.instantiateFromStoryBoard(appStoryBoard: .Details)
+        viewcontroller.detailsViewModel = viewModel
+        return viewcontroller
+    }
 
 }
